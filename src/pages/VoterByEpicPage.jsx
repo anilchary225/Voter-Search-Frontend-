@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import VoterDetails from "../components/VoterDetails";
+import React from "react";
+import { API_BASE } from "../config";
 
 export default function VoterByEpicPage() {
   const { epic } = useParams();
@@ -8,7 +10,7 @@ export default function VoterByEpicPage() {
 
   useEffect(() => {
     async function fetchVoter() {
-      const r = await fetch(`https://gp-voter-search-backend.onrender.com/voter/${epic}`);
+      const r = await fetch(`${API_BASE}/voter/${epic}`);
       if (r.status === 404) {
         setVoter(null);
       } else {

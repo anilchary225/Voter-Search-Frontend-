@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import SearchBox from "../components/SearchBox";
 import VoterCard from "../components/VoterCard";
 import VoterDetails from "../components/VoterDetails";
+import { API_BASE } from "../config";
 
 export default function VoterSearchPage() {
   const [query, setQuery] = useState("");
@@ -19,11 +20,11 @@ export default function VoterSearchPage() {
 
       try {
         if (query) {
-          const r = await fetch(`https://gp-voter-search-backend.onrender.com/search?q=${encodeURIComponent(query)}`);
+          const r = await fetch(`${API_BASE}/search?q=${encodeURIComponent(query)}`);
           const data = await r.json();
           setResults(ward ? data.filter(x => String(x.ward) === String(ward)) : data);
         } else {
-          const r = await fetch(`https://gp-voter-search-backend.onrender.com/ward/${ward}`);
+          const r = await fetch(`${API_BASE}/ward/${ward}`);
           const data = await r.json();
           setResults(data);
         }

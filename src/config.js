@@ -1,0 +1,1 @@
+export const API_BASE = "https://gp-voter-search-backend.onrender.com";

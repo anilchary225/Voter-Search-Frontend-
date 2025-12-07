@@ -11,8 +11,8 @@ export default function Dashboard() {
 
   useEffect(() => {
     async function load() {
-      const s = await fetch("/summary").then(r => r.json());
-      const ws = await fetch("/ward-summaries").then(r => r.json());
+      const s = await fetch(`${API_BASE}/summary`).then(r => r.json());
+      const ws = await fetch(`${API_BASE}/ward-summaries`).then(r => r.json());
       setSummary(s);
       setWardSummary(ws);
     }
