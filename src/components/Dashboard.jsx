@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import SummaryCard from "./SummaryCard";
 import WardSummaryCard from "./WardSummaryCard";
 import VoterSearchPage from "../pages/VoterSearchPage";
+import { API_BASE } from "../config";
 // import VoterByEpicPage from "../pages/VoterByEpicPage";
 // import SearchBox from "./SearchBox";
 
