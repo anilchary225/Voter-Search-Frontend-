@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import VoterDetails from "../components/VoterDetails";
-import React from "react";
 import { API_BASE } from "../config";
 
 export default function VoterByEpicPage() {
