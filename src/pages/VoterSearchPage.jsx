@@ -19,11 +19,11 @@ export default function VoterSearchPage() {
 
       try {
         if (query) {
-          const r = await fetch(`/search?q=${encodeURIComponent(query)}`);
+          const r = await fetch(`https://gp-voter-search-backend.onrender.com/search?q=${encodeURIComponent(query)}`);
           const data = await r.json();
           setResults(ward ? data.filter(x => String(x.ward) === String(ward)) : data);
         } else {
-          const r = await fetch(`/ward/${ward}`);
+          const r = await fetch(`https://gp-voter-search-backend.onrender.com/ward/${ward}`);
           const data = await r.json();
           setResults(data);
         }

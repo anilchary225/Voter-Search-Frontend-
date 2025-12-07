@@ -8,7 +8,7 @@ export default function VoterByEpicPage() {
 
   useEffect(() => {
     async function fetchVoter() {
-      const r = await fetch(`/voter/${epic}`);
+      const r = await fetch(`https://gp-voter-search-backend.onrender.com/voter/${epic}`);
       if (r.status === 404) {
         setVoter(null);
       } else {
