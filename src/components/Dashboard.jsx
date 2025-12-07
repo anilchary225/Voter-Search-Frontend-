@@ -3,6 +3,7 @@ import SummaryCard from "./SummaryCard";
 import WardSummaryCard from "./WardSummaryCard";
 import VoterSearchPage from "../pages/VoterSearchPage";
 import { API_BASE } from "../config";
+import { Analytics } from '@vercel/analytics/react';
 // import VoterByEpicPage from "../pages/VoterByEpicPage";
 // import SearchBox from "./SearchBox";
 
@@ -75,6 +76,7 @@ export default function Dashboard() {
         website to make it easy for you to search your name, EPIC number, house number,
         and instantly know which ward you belong to along with complete details.
       </footer>
+      <Analytics />
     </div>
   );
 }
