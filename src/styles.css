@@ -1,0 +1,5 @@
+body { font-family: system-ui, -apple-system, "Noto Sans Telugu", sans-serif; padding:18px; max-width:900px; margin:auto; background:#f7f7f8;}
+.container { background:#fff; padding:18px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.06);}
+.muted { color:#666; font-size:0.95rem; }
+.card { border:1px solid #e6e6e6; padding:10px; border-radius:6px; margin:8px 0; background:#fff; }
+input, select { font-size:16px; }
